@@ -98,7 +98,12 @@ footer{
 }
 
 .w3checker{
+    display: flex;
     margin: 1%;
+}
+
+.html-checker, .css-checker{
+    margin-left: 2%;
 }
 
 #first-nav-item{
