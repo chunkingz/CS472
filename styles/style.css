@@ -18,6 +18,7 @@ a {
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     border-radius: 20px;
+    transition: 0.5s;
 }
 
 .card-img{
@@ -25,6 +26,7 @@ a {
 }
 .card-img:hover {
     border-radius: 20px 20px 0 0;
+    transition: 0.5s;
 }
   
 .card-caption {
@@ -59,6 +61,11 @@ a {
 
 /* end styles for nav */
 
+#main-content{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 section#main-content{
     margin-top: 2%;
     margin-left: 2%;
@@ -66,21 +73,21 @@ section#main-content{
 
 ul{
     list-style-type: none;
+    padding-inline-start: 0;
 }
 
 li{
     margin-top: 1%;
+    margin-bottom: 5%;
 }
 
 #list-of-labs{
-    margin-top: 4%;
+    margin-top: 0;
 }
 
 #list-of-labs li:hover {
-    width: 20%;
-    padding: 1% 2.5%;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: 100%;
+    border-bottom: 5px solid lavender;
     transition: 0.5s;
 }
 
@@ -130,3 +137,10 @@ footer{
 
 /* end styles for socials */
 
+/* ol {
+    display: flex;
+    flex-direction: column-reverse;
+}
+ol > li {
+    flex: 0 0 auto;
+} */
