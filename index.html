@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
     <title>Fortune King's HomePage</title>
 </head>
 <body>
-    <header></header>
-    <section id="main-content">
-        <picture id="image">
-            <img src="./assets/Fortune_King.jpg" 
-            alt="A picture of Fortune King" 
-            width="15%" height="auto">
-        </picture>
+    <header>
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#">About</a>
+          </div>
+    </header>
 
-        <div id="full-name">
-            <h2>Fortune King</h2>
+    <section id="main-content">
+
+        <div id="image" class="card">
+            <img class="card-img" src="./assets/Fortune_King.jpg" alt="A picture of Fortune King" width="100%">
+            <div class="card-caption" id="name-and-occupation">
+                <h2>Fortune King</h2>
+                <p>Software Engineer</p>
+            </div>
         </div>
-        
+
         <div id="list-of-labs">
             <ul><a href="#">Lab 1 - Home Page</a></ul>
             <ul><a href="#">Lab 2 - About me</a></ul>
@@ -28,6 +36,19 @@
             <ul><a href="#">Lab 6 - Movie Review PHP</a></ul>
         </div>
     </section>
-    <footer></footer>
+
+    <footer>
+        <div class="socials">
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+        <div class="w3checker">
+            <a href="http://validator.w3.org/check/referer"> 
+                <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator"/>
+            </a>
+        </div>
+        
+    </footer>
 </body>
 </html>
