@@ -1,7 +1,6 @@
-
 body {
     font-family: 'ABeeZee';
-    font-size: 22px;
+    font-size: 20px;
     margin: 0;
 }
 
@@ -10,7 +9,7 @@ a {
 }
 
 .card {
-    width: 20%;
+    width: 25%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
 }
@@ -18,6 +17,7 @@ a {
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     border-radius: 20px;
+    transition: 0.5s;
 }
 
 .card-img{
@@ -25,6 +25,7 @@ a {
 }
 .card-img:hover {
     border-radius: 20px 20px 0 0;
+    transition: 0.5s;
 }
   
 .card-caption {
@@ -59,28 +60,46 @@ a {
 
 /* end styles for nav */
 
-section#main-content{
+#main-content, .about-main-content, .moods-content, .movies-and-people{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section#main-content, section.about-main-content{
     margin-top: 2%;
     margin-left: 2%;
+    margin-right: 2%;
+}
+
+section.movies-moods-neighbours, .movies-and-people{
+    margin-top: 5%;
+}
+
+#mood-header{
+    text-align: center;
+}
+
+#happyGif{
+    width: 70%;
 }
 
 ul{
     list-style-type: none;
+    padding-inline-start: 0;
 }
 
 li{
     margin-top: 1%;
+    margin-bottom: 5%;
 }
 
 #list-of-labs{
-    margin-top: 4%;
+    margin-top: 0;
 }
 
 #list-of-labs li:hover {
-    width: 20%;
-    padding: 1% 2.5%;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: 100%;
+    border-bottom: 5px solid lavender;
     transition: 0.5s;
 }
 
@@ -128,5 +147,16 @@ footer{
     color: #FFC0CB;
 }
 
+p::first-letter {
+    font-size: 1.5em;
+}
+
 /* end styles for socials */
 
+ol {
+    display: flex;
+    flex-direction: column-reverse;
+}
+ol > li {
+    flex: 0 0 auto;
+}

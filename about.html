@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
     <title>About Fortune King</title>
 </head>
+
 <body>
     <header>
         <div class="topnav">
@@ -14,41 +19,94 @@
         </div>
     </header>
 
-    <section id="about-content">
-
-        <h2>About Fortune King</h2>
+    <section class="about-main-content" id="section-1">
 
         <div id="image" class="card">
             <img class="card-img" src="./assets/Fortune_King.jpg" alt="A picture of Fortune King">
             <div class="card-caption" id="name-and-occupation">
-                <p>My name is Fortune King</p>
+                <h3>I am Fortune King</h3>
                 <p>I am a Software Engineer</p>
+                <h3><em>fun facts:</em></h3>
                 <p>I love to make new friends 😝 😊</p>
+                <p>I love to play sports ⚽️ 🏀 🏊‍♂️</p>
             </div>
         </div>
 
-        <div id="list-of-labs">
+        <div id="list-of-classes">
+            <div>
+                <h3>My Classes this Quarter</h3>
+            </div>
             <ul>
                 <li>
-                    <a href="#">Lab 1 - Home Page</a>
+                    CS390 - Fundamental Programming Practices
                 </li>
                 <li>
-                    <a href="#">Lab 2 - About me</a>
+                    CS401 - Modern Programming Practices
                 </li>
                 <li>
-                    <a href="#">Lab 3 - Recipe</a>
+                    CS472 - Web Application Programming
                 </li>
                 <li>
-                    <a href="#">Lab 4 - Movie Review</a>
+                    CS572 - Modern Web Applications
                 </li>
                 <li>
-                    <a href="#">Lab 5 - MP3 Library</a>
+                    CS545 - Web Application Architecture
                 </li>
                 <li>
-                    <a href="#">Lab 6 - Movie Review PHP</a>
+                    CS544 - Enterprise Applications
                 </li>
             </ul>
         </div>
+
+    </section>
+
+    <section class="movies-moods-neighbours" id="section-2">
+
+        <div class="moods">
+            <h2 id="mood-header">My Moods</h2>
+            <div class="moods-content">
+                <div>
+                    <p>Happy mood:</p>
+                    <img src="https://media.giphy.com/media/DhstvI3zZ598Nb1rFf/giphy.gif" alt="happy" id="happyGif">
+                </div>
+                <div>
+                    <p>Sad mood:</p>
+                    <img src="https://media.giphy.com/media/d2lcHJTG5Tscg/giphy.gif" alt="sad">
+                </div>
+            </div>
+        </div>
+
+        <div class="movies-and-people">
+            <div class="movies">
+                <h2>My favorite movies</h2>
+                <ol>
+                    <li>How I met your Mother (<a href="https://www.imdb.com/title/tt0460649/" target="_blank">IMDB</a>)
+                        <br>
+                        Creators: <br> &nbsp;&nbsp; Carter Bays, Craig Thomas
+                        <br>
+                        Genre: <br> &nbsp;&nbsp; Comedy / Drama / Romance
+                        <br>
+                        Stars: <br> &nbsp;&nbsp; Neil Patrick Harris, Josh Radnor, Jason Segel, Cobie Smulders
+                        <br>
+                        Tagline: <br> &nbsp;&nbsp; A father recounts to his children through a series of flashbacks <br> the journey he and his four best friends took leading up to <br> him meeting their mother.
+                        <br>
+                    </li>
+                    <li>The pursuit of Happyness (<a href="https://www.imdb.com/title/tt0454921/" target="_blank">IMDB</a>)</li>
+                    <li>The passion of Christ (<a href="https://www.imdb.com/title/tt0335345/" target="_blank">IMDB</a>)</li>
+                    <li>The Office: USA (<a href="https://www.imdb.com/title/tt0386676/" target="_blank">IMDB</a>)</li>
+                    <li>Coco: the animation movie (<a href="https://www.imdb.com/title/tt2380307/" target="_blank">IMDB</a>)</li>
+                </ol>
+            </div>
+    
+            <div class="neighbours">
+                <h2>My Neighbours</h2>
+                <div>
+                    <p>Joan Chifamba: </p>
+                    <p>Blessings Naggayi: </p>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <footer>
@@ -77,9 +135,10 @@
                     <img src=http://jigsaw.w3.org/css-validator/images/vcss alt="Valid CSS!">
                 </a>
             </div>
-                
+
         </div>
 
     </footer>
 </body>
+
 </html>
