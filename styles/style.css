@@ -101,3 +101,24 @@ footer{
 #first-nav-item{
     margin-left: 2%;
 }
+
+/* style socials */
+
+.fa-twitter, .fa-linkedin, .fa-instagram{
+    color: rebeccapurple;
+}
+
+.fa-twitter:hover{
+    color: #1DA1F2;
+}
+
+.fa-linkedin:hover{
+    color: #0e76a8;
+}
+
+.fa-instagram:hover{
+    color: #FFC0CB;
+}
+
+/* end styles for socials */
+
