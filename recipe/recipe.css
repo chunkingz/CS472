@@ -45,10 +45,6 @@ h2, h3, .underline{
     text-decoration: line-through;
 }
 
-.copyright{
-    font-family: monospace;
-}
-
 /* start Tooltip text */
 .tooltip {
     position: relative;
@@ -97,18 +93,18 @@ h2, h3, .underline{
 }
 
 footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    position: relative;
-    left: 70%;
-    margin-bottom: 5%;
+    float: right;
+    margin-bottom: 3%;
 }
 
 .w3checker{
+    float: right;
     display: flex;
-    position: relative;
-    left: 17.5%;
+    margin-right: 9%;
+}
+
+.copyright{
+    margin-top: 10%;
 }
 
 .section-1 img {
