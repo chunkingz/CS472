@@ -36,14 +36,14 @@ body{
     display: flex;
 }
 
+.col{
+    flex: 1;
+}
+
 .full-row{
     flex: 2;
     background-color: #A2B964;
     border-radius: 0 0 15px 15px;
-}
-
-.col{
-    flex: 1;
 }
 
 #right-content{
