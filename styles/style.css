@@ -75,6 +75,14 @@ section.movies-moods-neighbours, .movies-and-people{
     margin-top: 5%;
 }
 
+.neighbours, .movies{
+    max-width: 30%;
+}
+
+.neighbours, dl{
+    font-size: 18px;
+}
+
 #mood-header{
     text-align: center;
 }
