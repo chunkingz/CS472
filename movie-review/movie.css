@@ -96,6 +96,13 @@ body{
 
 #footer{
     float: right;
+    position: fixed;
+    top: 93%;
+    right: 0;
+}
+
+#footer img{
+    opacity: 0.5;
 }
 
 #pagination{
