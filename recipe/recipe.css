@@ -1,0 +1,116 @@
+
+body{
+    background-color: #fff;
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia, Garamond, sans-serif, serif;
+    background-image: url("https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg");
+    background-repeat: repeat;
+}
+
+li{
+    list-style-image: url("https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie_icon.gif");
+}
+
+a, h2, h3{
+    color: #A4A400;
+}
+
+h2, h3{
+    background-color: #F0F0F0;
+    font-family: 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
+    letter-spacing: 0.25em;
+    width: fit-content;
+    padding: 10px;
+}
+
+h2{
+    text-align: center;
+    font-size: 22pt;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+h3{
+    text-align: left;
+    font-size: 18pt;
+    font-weight: normal;
+}
+
+h2, h3, .underline{
+    text-decoration: underline;
+}
+
+.strike{
+    text-decoration: line-through;
+}
+
+.copyright{
+    font-family: monospace;
+}
+
+/* start Tooltip text */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%; 
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+  
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/* end Tooltip text */
+
+.recipe-direction, .comments-em{
+    font-weight: bolder;
+}
+
+.comments{
+    font-style: italic;
+    background-color: #FFFFA8;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    left: 70%;
+    margin-bottom: 5%;
+}
+
+.w3checker{
+    display: flex;
+    position: relative;
+    left: 17.5%;
+}
+
+.section-1 img {
+    margin-top: 2%;
+}
