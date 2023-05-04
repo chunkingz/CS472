@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+    <title>Retrieve Grade</title>
+</head>
+<body>
+
+    <section class="main-content">
+        <h1>Retrieve your grade</h1>
+
+        <div class="grade-form">
+            <form action="http://mumstudents.org/params.php" method="get" target="_blank">
+
+                <label for="fullName">Name:</label><br>
+                <input type="text" name="fullName" id="fullName" placeholder="John Doe...">
+                
+                <br><br>
+
+                <label for="studentid">Student ID:</label><br>
+                <input type="text" name="studentid" id="studentid" placeholder="XXXXXXXXX">
+                
+                <br><br>
+
+                <label for="assignment">Select Assignment:</label><br>
+                <select name="assignment" id="assignment">
+                    <option value=""></option>
+                    <option value="homepage">Homepage</option>
+                    <option value="about">About Me</option>
+                    <option value="recipe">Recipe</option>
+                    <option value="movie">Movie Review</option>
+                    <option value="nerdluv">Nerdluv Signup</option>
+                    <option value="tip">Tip Calculator</option>
+                    <option value="task">Task List</option>
+                    <option value="timer">JS Timer</option>
+                    <option value="decorate">Decorate Text</option>
+                </select> 
+                
+                <br><br>
+
+                <p>Select entry:</p>
+                <input type="radio" id="january" name="entry" value="January">
+                <label for="january">January 2023</label><br>
+                <input type="radio" id="april" name="entry" value="April">
+                <label for="april">April 2023</label><br>
+                <input type="radio" id="august" name="entry" value="August">
+                <label for="august">August 2023</label><br>
+                <input type="radio" id="october" name="entry" value="October">
+                <label for="october">October 2023</label>
+                
+                <br><br>
+
+                <label class="container">
+                    <span id="attestTxt">I attest that I will be looking up just my own grade and no one else's.</span>
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <br><br>
+
+                <button type="submit">Get Grade!</button>
+            </form>
+        </div>
+    </section>
+    
+</body>
+</html>

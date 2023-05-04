@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+    <title>NerdLuv Sign up Page</title>
+</head>
+<body>
+
+    <header>
+        <div class="hero">
+            <div class="main-title">
+                <span id="mt-1">nerd</span><span id="mt-2">Luv</span><sup><span id="mt-3">&trade;</span></sup>
+            </div>
+            <div class="sub-title">
+                where meek geeks meet
+            </div>
+        </div>
+    </header>
+    
+    <section class="signup-section">
+        <form action="http://mumstudents.org/params.php" method="get" target="_blank">
+            <fieldset>
+                <legend>New User Signup:</legend>
+
+                <br>
+                <div class="row">
+                    <span class="col-1">
+                        <label for="fullName">Name:</label>
+                    </span>
+                    <span class="col-2">
+                        <input type="text" name="fullName" id="fullName" maxlength="16">
+                    </span>
+                </div>
+                
+                <br>
+
+                <div class="row">
+                    <span class="col-1">
+                        <span>Gender:</span> 
+                    </span>
+                    <span class="col-2">
+                        <div class="inputs">
+                            <input type="radio" id="male" name="entry" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="entry" value="female" checked>
+                            <label for="female">Female</label>
+                        </div>
+                    </span>
+                </div>
+                
+                <br>
+
+                <div class="row">
+                    <span class="col-1">
+                        <label for="age">Age:</label>
+                    </span>
+                    <span class="col-2">
+                        <input type="number" name="age" id="age" min="18" max="99">
+                    </span>
+                </div>
+                
+                <br>
+
+                <div class="row">
+                    <span class="col-1">
+                        <label for="personality">Personality type:</label>
+                    </span>
+                    <span class="col-2">
+                        <input type="text" name="personality" id="personality"> 
+                        <a href="https://www.humanmetrics.com/personality" target="_blank">(Don't know your type?)</a> 
+                    </span>
+                </div>
+                
+                <br>
+
+                <div class="row">
+                    <span class="col-1">
+                        <label for="assignment">Favorite OS:</label>
+                    </span>
+                    <span class="col-2">
+                        <div class="inputs">
+                            <select name="assignment" id="assignment">
+                                <option value="about">Windows OS</option>
+                                <option value="homepage">MacOS</option>
+                                <option value="recipe">Linux OS</option>
+                            </select> 
+                        </div>
+                    </span>
+                </div>
+                    
+                <br>
+
+                <div class="row">
+                    <span class="col-1">
+                        <label for="min-age">Seeking age:</label>
+                    </span>
+                    <span class="col-2">
+                        <div class="inputs">
+                            <input type="number" name="min-age" id="min-age" placeholder="min" min="18" max="99">
+                             to 
+                            <input type="number" name="max-age" id="max-age" placeholder="max" min="18" max="99">
+                        </div>
+                    </span>
+                </div>
+                
+                <br>
+
+                <button type="submit">Sign Up</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <section class="about">
+        <p class="aboutTxt">
+            This page is for single nerds to meet and date each other! <br>
+            Type in your personal information and wait for the nerdy love to begin! <br>
+            Thank you for using our site. <br><br>
+            Results and page &copy; Copyright Nerdluv inc.
+        </p>
+        <p>
+            <a href="../index.html">🔙 Back to Home page</a> 
+        </p>
+        
+    </section>
+
+    <footer>
+        <div class="w3checker">
+            <div class="html-checker">
+                <a href="http://validator.w3.org/check/referer">
+                    <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator">
+                </a>
+            </div>
+            <div class="css-checker">
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img src=http://jigsaw.w3.org/css-validator/images/vcss alt="Valid CSS!">
+                </a>
+            </div>
+                
+        </div>
+    </footer>
+</body>
+</html>
