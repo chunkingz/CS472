@@ -16,7 +16,8 @@ init();
 
 const addTask = () => {
     const task = document.forms["taskForm"]["task"].value;
-    localStorage.setItem(localStorage.length+1, task);
+    if (task == null || String(task).trim() == "") return;
+    localStorage.setItem(localStorage.length+1, String(task).trim());
     const x = localStorage.getItem(localStorage.length);
     document.getElementById("task-list").innerHTML += x +"\n";
     document.getElementById("task").value = "";
