@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <title>Task List</title>
+</head>
+<body>
+    <section>
+        <div class="header">
+            <h2>Task List</h2>
+        </div>
+        <div class="main-content">
+
+            <div class="col-1">
+                <form action="" method="post" name="taskForm" onsubmit="return false">
+                    <label for="task">Task</label> <br>
+                    <input type="text" name="task" id="task" maxlength="30">
+                    <br><br>
+                    <button id="submitBtn" onclick="addTask()">Add Task</button>
+                    <br><br>
+                    <button id="resetBtn" onclick="clearTasks()">Clear Tasks</button>
+                </form>
+            </div>
+
+            <div class="col-2">
+                <span>Task List (<span id="taskCounter">0</span>)</span> <br>
+                <textarea name="task-list" id="task-list" cols="50" rows="7" disabled></textarea>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="./tasks.js"></script>
+
+</body>
+</html>
