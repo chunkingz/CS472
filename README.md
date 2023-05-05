@@ -1,3 +1,3 @@
 # CS472 (WAP)
 
-Click into the grades and/or nerdluv directories to see the README.md
+Click into the tip-calculator and/or task-list directories to see the README.md
