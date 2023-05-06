@@ -16,4 +16,4 @@ write a simple HTML form that gathers the necessary information to display a stu
 
 ## Hosted on Github Pages :octocat:
 
-:link: [Link to github pages](https://chunkingz.github.io/CS472/movie-review/tmnt.html)
+:link: [Link to github pages](https://chunkingz.github.io/CS472/grades/)

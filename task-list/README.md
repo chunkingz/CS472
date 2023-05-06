@@ -21,4 +21,4 @@ If the User closes the Browser (or the Browser window) and then reopens it later
 
 ## Hosted on Github Pages :octocat:
 
-:link: [Link to github pages](https://chunkingz.github.io/CS472/movie-review/tmnt.html)
+:link: [Link to github pages](https://chunkingz.github.io/CS472/task-list/tasks.html)

@@ -21,4 +21,4 @@ The signup form should have these elements:
 
 ## Hosted on Github Pages :octocat:
 
-:link: [Link to github pages](https://chunkingz.github.io/CS472/movie-review/tmnt.html)
+:link: [Link to github pages](https://chunkingz.github.io/nerdluv-signup/signup.html)

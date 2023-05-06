@@ -13,4 +13,4 @@ Modify the Tip calculator to make it work as expected.
 
 ## Hosted on Github Pages :octocat:
 
-:link: [Link to github pages](https://chunkingz.github.io/CS472/movie-review/tmnt.html)
+:link: [Link to github pages](https://chunkingz.github.io/CS472/tip-calculator/tip.html)
