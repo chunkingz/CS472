@@ -45,6 +45,7 @@ button#submitBtn, button#resetBtn{
 
 input[type=text]{
     width: 80%;
+    border: 2px solid black;
 }
 
 button#submitBtn{
