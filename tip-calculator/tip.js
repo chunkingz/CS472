@@ -1,7 +1,7 @@
 
 const calcTip = () => {
-    let subTotal = document.forms["tipForm"]["subtotal"].value;
-    const percentageTip = document.forms["tipForm"]["tip"].value;
+    let subTotal = document.getElementById("subtotal").value;
+    const percentageTip = document.getElementById("tip").value;
     if(percentageTip > 0) {
         subTotal = parseFloat(subTotal) + subTotal * percentageTip / 100;
     } 
