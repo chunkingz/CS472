@@ -73,3 +73,9 @@ button#resetBtn:hover{
 textarea{
     background-color: white;
 }
+
+#taskCounter{
+    color: darkred;
+    font-weight: bold;
+    font-size: 24px;
+}
