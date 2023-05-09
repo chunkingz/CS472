@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <title>Bank Account Lab</title>
+</head>
+<body>
+
+    <section>
+        <div class="form">
+            <div class="header">
+                <h2>Bank Account App</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-1">
+                    <label for="account-name">Account Name</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" name="account-name" id="account-name">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-1">
+                    <label for="deposit">Deposit</label>
+                </div>
+                <div class="col-2">
+                    <input type="number" name="deposit" id="deposit">
+                </div>
+            </div>
+            <br>
+            <button id="create-new-acc-btn">Create new Account</button>
+            <br>
+            <textarea name="output" id="output" cols="55" rows="10" disabled></textarea>
+            <br>
+
+            <button id="deposit-btn">Deposit</button>
+            &nbsp;&nbsp;
+            <button id="debit-btn">Debit</button>
+            
+        </div>
+    </section>
+    
+    <script src="./bankAccount.js"></script>
+</body>
+</html>

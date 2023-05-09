@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <link rel="stylesheet" href="./actionPage.css">
+    <title>Action Page</title>
+</head>
+<body>
+    
+    <section>
+        <div class="form">
+            <div class="header">
+                <h2 id="actionType"></h2>
+            </div>
+
+            <div class="row">
+                <div class="col-1">
+                    <label for="account-name-dropdown">Select Account Name</label>
+                </div>
+                <div class="col-2">
+                    <select name="account-name-dropdown" id="account-name-dropdown">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-1">
+                    <label for="deposit" id="deposit-label"></label>
+                </div>
+                <div class="col-2">
+                    <input type="number" name="deposit" id="amountInput">
+                </div>
+            </div>
+            <br>
+            <button id="submit-btn">Submit</button>
+            <br>
+            
+        </div>
+    </section>
+    
+
+    <script src="./actionPage.js"></script>
+</body>
+</html>

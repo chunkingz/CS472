@@ -17,4 +17,4 @@ The signup form should have these elements:
 
 ## Hosted on Github Pages :octocat:
 
-:link: [Link to github pages](https://chunkingz.github.io/CS472/)
+:link: [Link to github pages](https://chunkingz.github.io/CS472/decorate-my-text/decoratemytext.html)

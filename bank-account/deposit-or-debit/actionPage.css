@@ -1,0 +1,66 @@
+body {
+    font-family: 'ABeeZee';
+    font-size: 20px;
+}
+
+section {
+    margin: 2%;
+    border: 3px solid blue;
+    padding: 20px 20px 50px 20px;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.header {
+    color: blue;
+    width: 70%;
+    text-shadow: 2px 2px #999;
+}
+
+.row{
+    display: flex;
+}
+
+.col-1{
+    width: 15%;
+}
+
+.col-2{
+    width: 60%;
+}
+input[type=number], button#submit-btn, select{
+    width: 40%;
+}
+
+input[type=number] {
+    padding: 5px 10px;
+    margin: 5px 0;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+button#submit-btn {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: aquamarine;
+    padding: 10px;
+}
+
+button#submit-btn:hover {
+    background-color: rgb(241, 232, 50);
+    transition-duration: 0.5s;
+    cursor: pointer;
+    box-shadow: 5px 7px 10px blue;
+}
+
+select {
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 7px;
+}
