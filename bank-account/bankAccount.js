@@ -29,19 +29,29 @@ class BankAccount {
         const name = accName.value;
         const amount = depositAmount.value;
         if(String(name).trim() == "" || amount <= 0) return;
-        const acc = new BankAccount(name, amount);
-        BankAccount.accountInfoList.push(acc);
-        BankAccount.accountInfoList.forEach((acc, i)=>{
-            localStorage.setItem("Bank Account " + (i+1), [acc.#accName, acc.#accInitDeposit]);
-        })
+        // const acc = new BankAccount(name, amount);
+        // BankAccount.accountInfoList.push(acc);
+        // BankAccount.accountInfoList.forEach((acc, i)=>{
+        //     localStorage.setItem("Bank Account " + (i+1), [acc.#accName, acc.#accInitDeposit]);
+        // })
+        // console.log(BankAccount.accountInfoList);
+        localStorage.setItem("Bank Account " + (localStorage.length+1), [name, amount]);
         this.displayAccounts();
     }
 
     displayAccounts(){
         outputBox.value = "";
-        BankAccount.accountInfoList.forEach((acc)=>{
-            outputBox.value += `Account Name: ${acc.#accName}, Balance: ${acc.#accInitDeposit} \n`;
-        })
+        let valueArray = "";
+
+        if(localStorage.length > 0){
+            for (let i = 1; i <= localStorage.length; i++) {
+                valueArray = localStorage.getItem("Bank Account " + i);
+                let accountType = valueArray.split(',')[0];
+                let existingAmount = valueArray.split(',')[1];
+
+                outputBox.value += `Account Name: ${accountType}, Balance: ${existingAmount} \n`;
+            }
+        }
         accName.value = "";
         depositAmount.value = "";
     }
@@ -63,10 +73,13 @@ debitBtn.onclick = () => {
 
 const init = () => {
     let valueArray = "";
+    let valueArray2 = [];
 
     if(localStorage.length > 0){
         for (let i = 1; i <= localStorage.length; i++) {
             valueArray = localStorage.getItem("Bank Account " + i);
+            valueArray2.push(localStorage.getItem("Bank Account " + i));
+            console.log(valueArray2);
             let accountType = valueArray.split(',')[0];
             let existingAmount = valueArray.split(',')[1];
 
