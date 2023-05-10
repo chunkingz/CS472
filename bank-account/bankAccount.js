@@ -52,11 +52,13 @@ const init = () => {
     outputBox.value = "";
 
     if(localStorage.length > 0){
-        let accountsArray = JSON.parse(localStorage.getItem("Bank Accounts"));        
-        for (let i = 0; i < accountsArray.length; i++) {
-            let accountType = accountsArray[i].name;
-            let existingAmount = accountsArray[i].amount;
-            outputBox.value += `Account Name: ${accountType}, Balance: ${existingAmount} \n`;
+        let accountsArray = JSON.parse(localStorage.getItem("Bank Accounts"));  
+        if(accountsArray.length > 0){      
+            for (let i = 0; i < accountsArray.length; i++) {
+                let accountType = accountsArray[i].name;
+                let existingAmount = accountsArray[i].amount;
+                outputBox.value += `Account Name: ${accountType}, Balance: ${existingAmount} \n`;
+            }
         }
     }
     accName.value = "";
