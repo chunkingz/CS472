@@ -73,13 +73,10 @@ debitBtn.onclick = () => {
 
 const init = () => {
     let valueArray = "";
-    let valueArray2 = [];
 
     if(localStorage.length > 0){
         for (let i = 1; i <= localStorage.length; i++) {
             valueArray = localStorage.getItem("Bank Account " + i);
-            valueArray2.push(localStorage.getItem("Bank Account " + i));
-            console.log(valueArray2);
             let accountType = valueArray.split(',')[0];
             let existingAmount = valueArray.split(',')[1];
 
