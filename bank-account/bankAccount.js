@@ -5,7 +5,7 @@ let createAccountBtn = document.getElementById("create-new-acc-btn");
 let depositBtn = document.getElementById("deposit-btn");
 let debitBtn = document.getElementById("debit-btn");
 
-// localStorage.clear();
+let accountInfoList2 = [];
 
 class BankAccount {
     #accName;
@@ -29,34 +29,41 @@ class BankAccount {
         const name = accName.value;
         const amount = depositAmount.value;
         if(String(name).trim() == "" || amount <= 0) return;
-        // const acc = new BankAccount(name, amount);
-        // BankAccount.accountInfoList.push(acc);
-        // BankAccount.accountInfoList.forEach((acc, i)=>{
-        //     localStorage.setItem("Bank Account " + (i+1), [acc.#accName, acc.#accInitDeposit]);
-        // })
-        // console.log(BankAccount.accountInfoList);
-        localStorage.setItem("Bank Account " + (localStorage.length+1), [name, amount]);
-        this.displayAccounts();
-    }
 
-    displayAccounts(){
-        outputBox.value = "";
-        let valueArray = "";
+        let accountsArray = JSON.parse(localStorage.getItem("Bank Accounts")); 
 
-        if(localStorage.length > 0){
-            for (let i = 1; i <= localStorage.length; i++) {
-                valueArray = localStorage.getItem("Bank Account " + i);
-                let accountType = valueArray.split(',')[0];
-                let existingAmount = valueArray.split(',')[1];
-
-                outputBox.value += `Account Name: ${accountType}, Balance: ${existingAmount} \n`;
+        if(accountInfoList2.length == 0 && accountsArray != null) {
+            // incase page was reloaded, and the array becomes empty, run this.
+            for (let i = 0; i < accountsArray.length; i++) {
+                accountInfoList2.push(accountsArray[i]);
             }
+            accountInfoList2.push({name, amount});
+            localStorage.setItem("Bank Accounts", JSON.stringify(accountInfoList2));
+        } else {
+            accountInfoList2.push({name, amount});
+            localStorage.setItem("Bank Accounts", JSON.stringify(accountInfoList2));
         }
-        accName.value = "";
-        depositAmount.value = "";
+        init();
     }
-    
+
 }
+
+const init = () => {
+    outputBox.value = "";
+
+    if(localStorage.length > 0){
+        let accountsArray = JSON.parse(localStorage.getItem("Bank Accounts"));        
+        for (let i = 0; i < accountsArray.length; i++) {
+            let accountType = accountsArray[i].name;
+            let existingAmount = accountsArray[i].amount;
+            outputBox.value += `Account Name: ${accountType}, Balance: ${existingAmount} \n`;
+        }
+    }
+    accName.value = "";
+    depositAmount.value = "";
+}
+
+init();
 
 createAccountBtn.onclick = () => {
     const bankAccount = new BankAccount();
@@ -71,18 +78,4 @@ debitBtn.onclick = () => {
     window.location.assign("./deposit-or-debit/actionPage.html?action=debit");
 }
 
-const init = () => {
-    let valueArray = "";
 
-    if(localStorage.length > 0){
-        for (let i = 1; i <= localStorage.length; i++) {
-            valueArray = localStorage.getItem("Bank Account " + i);
-            let accountType = valueArray.split(',')[0];
-            let existingAmount = valueArray.split(',')[1];
-
-            outputBox.value += `Account Name: ${accountType}, Balance: ${existingAmount} \n`;
-        }
-    }
-}
-
-init();

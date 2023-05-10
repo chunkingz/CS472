@@ -6,22 +6,22 @@ let amountInput = document.getElementById("amountInput");
 
 const urlParams = new URLSearchParams(window.location.search);
 const actionParam = urlParams.get('action');
-let accountNames = [];
+let accountType = [];
+let existingAmount = [];
 
 
 const populateDropdown = () => {
-let accountArray = [];
-    for (let i = 1; i <= localStorage.length; i++) {
-        accountArray.push(localStorage.getItem("Bank Account " + i ));
+
+    if(localStorage.length > 0){
+        let accountsArray = JSON.parse(localStorage.getItem("Bank Accounts"));        
+        for (let i = 0; i < accountsArray.length; i++) {
+            accountType.push(accountsArray[i].name);
+            existingAmount.push(accountsArray[i].amount);
+        }
     }
 
-    accountArray.forEach(acc => {
-        let arr = acc.split(',');
-        accountNames.push(arr[0]);
-    })
-
-    for(let i = 0; i < accountNames.length; i++) {
-        let opt = accountNames[i];
+    for(let i = 0; i < accountType.length; i++) {
+        let opt = accountType[i];
         let el = document.createElement("option");
         el.textContent = opt;
         el.value = opt;
@@ -58,72 +58,47 @@ accountNameDropdown.onchange = () => {
 
 submitBtn.onclick = () => {
     if(actionParam == "deposit"){
-        let amount = amountInput.value;
-        if(amount <= 0) return;
+        let accountInfoList2 = [];
+        const index = accountNameDropdown.selectedIndex-1;
 
-        let index = "";
-        let valueArray = [];
-        let existingAmount = "";
-        let accountType = "";
-
-
-        for (let i = 0; i <= accountNames.length; i++) {
-            if(accountNameDropdown.selectedIndex == i){
-                valueArray = localStorage.getItem("Bank Account " + i);
-                index = "Bank Account " + i;
-            }
-        }
-
-        accountType = valueArray.split(',')[0];
-
-        existingAmount = valueArray.split(',')[1];
-
-        if(parseFloat(amount) <= 0) {
+        if(amountInput.value == "" || parseFloat(amountInput.value) <= 0) {
             alert("The amount is too low, increase it and try again");
             return;
         }
 
-        existingAmount = parseFloat(existingAmount) + parseFloat(amount);
-        
-        let combinedArray = [accountType, existingAmount].join(',');
+        existingAmount[index] = (parseFloat(existingAmount[index]) + parseFloat(amountInput.value)).toString();
 
-        localStorage.setItem(index, combinedArray);
+
+        for (let i = 0; i < accountType.length; i++) {
+            let name = accountType[i];
+            let amount = existingAmount[i];
+            accountInfoList2.push({name, amount});
+        }
+        
+        localStorage.setItem("Bank Accounts", JSON.stringify(accountInfoList2));
 
         window.location.assign("../index.html");
 
 
     } else if(actionParam == "debit"){
-        // debit();
-        let amount = amountInput.value;
-        if(amount <= 0) return;
+        let accountInfoList2 = [];
+        const index = accountNameDropdown.selectedIndex-1;
 
-        let index = "";
-        let valueArray = [];
-        let existingAmount = "";
-        let accountType = "";
-
-
-        for (let i = 0; i <= accountNames.length; i++) {
-            if(accountNameDropdown.selectedIndex == i){
-                valueArray = localStorage.getItem("Bank Account " + i);
-                index = "Bank Account " + i;
-            }
-        }
-
-        accountType = valueArray.split(',')[0];
-
-        existingAmount = valueArray.split(',')[1];
-
-        if(parseFloat(amount) > parseFloat(existingAmount)) {
+        if(amountInput.value == "" || parseFloat(amountInput.value) > existingAmount[index]) {
             alert("The amount is too high, reduce it and try again");
             return;
         }
 
-        existingAmount = parseFloat(existingAmount) - parseFloat(amount);
-        
-        let combinedArray = [accountType, existingAmount].join(',');
+        existingAmount[index] = (parseFloat(existingAmount[index]) - parseFloat(amountInput.value)).toString();
 
-        localStorage.setItem(index, combinedArray);
+
+        for (let i = 0; i < accountType.length; i++) {
+            let name = accountType[i];
+            let amount = existingAmount[i];
+            accountInfoList2.push({name, amount});
+        }
+        
+        localStorage.setItem("Bank Accounts", JSON.stringify(accountInfoList2));
 
         window.location.assign("../index.html");
 
