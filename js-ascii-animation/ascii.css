@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: #CCCCFF;
+}
+
+.header h2{
+    text-align: center;
+    font-size: 32pt;
+    font-weight: bold;
+    margin: 0;
+}
+
+.textarea-box {
+    text-align: center;
+}
+
+.textarea-box textarea {
+    width: 90%;
+    max-width: 90%;
+    height: 400px;
+    max-height: 400px;
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: monospace;
+    background-color: white;
+    color: black;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+}
+
+fieldset{
+    border: 5px solid black;
+}
+
+button, select {
+    padding: 5px 10px;
+}
+
+button, select, fieldset.size label{
+    font-size: 20px;
+}
+
+input[type="checkbox"]{
+    width: 30px;
+    height: 30px;
+}
+
+fieldset.size label{
+    position: relative;
+    top: -7px;
+}
+
+#footer{
+    float: right;
+}
