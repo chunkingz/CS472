@@ -6,8 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#accordion").accordion();
+        });
+    </script>
     <title>Fortune King's HomePage</title>
 </head>
 
@@ -33,7 +40,8 @@
             <div>
                 <h2>List of Labs</h2>
             </div>
-            <p>Week One</p>
+            <div id="accordion">
+                <p>Week One</p>
             <ul>
                 <li>
                     <a href="#">Lab 1 - Home Page</a>
@@ -81,9 +89,35 @@
                     <a href="https://github.com/chunkingz/CS472/blob/Week2Day3/jQuery-quiz-2/jQuery-Quiz-2.pdf" target="_blank">Lab 14 - JQuery Quiz II</a>
                 </li>
                 <li>
-                    <a href="#">Lab 15 - JQuery Quiz III</a>
+                    <a href="https://github.com/chunkingz/CS472/blob/Week2Day4/jQuery-quiz-3/jQuery-Quiz-3.pdf" target="_blank">Lab 15 - JQuery Quiz III</a>
+                </li>
+                <li>
+                    <a href="./mouse-maze/index.html">Lab 16 - Mouse Maze</a>
                 </li>
             </ul>
+            <p>Week Three</p>
+            <ul>
+                <li>
+                    <a href="#">Lab 17 - Node Exercises</a>
+                </li>
+                <li>
+                    <a href="#">Lab 18 - Simple Calculator</a>
+                </li>
+                <li>
+                    <a href="#">Lab 19 - DOM & Events</a>
+                </li>
+                <li>
+                    <a href="#">Lab 20 - Number Quiz</a>
+                </li>
+                <li>
+                    <a href="#">Lab 21 - Astronomy Picture of the Day (AJAX)</a>
+                </li>
+                <li>
+                    <a href="#">Lab 22 - Astronomy Picture of the Day (Fetch)</a>
+                </li>
+            </ul>
+            </div>
+            
         </div>
     </section>
 
