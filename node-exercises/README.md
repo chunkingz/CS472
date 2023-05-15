@@ -16,4 +16,4 @@ This lab practices introduces the student to NodeJS.
 
 ## Hosted on Github Pages :octocat:
 
-:link: [Link to github pages](https://chunkingz.github.io/CS472/node-exercises)
+:link: [Link to github pages](https://github.com/chunkingz/CS472/tree/Week3Day1/node-exercises)
