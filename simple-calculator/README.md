@@ -1,4 +1,4 @@
-# CS472 (WAP)
+# CS472 (WAP): Simple Calculator Lab using Express & Node
 
 
 ## Intro :sunglasses:
