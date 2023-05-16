@@ -1,0 +1,40 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet')
+  link(rel='stylesheet' href='./calculator.css')
+  title Simple Calculator
+section
+  form(action='' method='post')
+    .form
+      .header-flex
+        h2.header Simple Calculator
+        h3.back-home 
+      div
+        h3#sub-header Enter two numbers
+      br
+      .row
+        .col-1
+          label(for='firstNumber') First Number
+        .col-2
+          input#firstNumber(type='number' name='firstNumber')
+      br
+      .row
+        .col-1
+          label(for='operation') Operation
+        .col-2
+          select#operation(name='operation')
+            option(value='add') Add (+)
+            option(value='subtract') Subtract (-)
+            option(value='multiply') Multiply (x)
+            option(value='divide') Divide (/)
+      br
+      .row
+        .col-1
+          label(for='secondNumber') Second Number
+        .col-2
+          input#secondNumber(type='number' name='secondNumber')
+      br
+      button#calculate-btn Calculate

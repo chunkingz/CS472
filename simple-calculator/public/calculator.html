@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <link rel="stylesheet" href="./calculator.css">
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+    <section>
+        <form action="" method="post">
+        <div class="form">
+            <div class="header-flex">
+                <h2 class="header">Simple Calculator</h2>
+                <h3 class="back-home"><a href="#">Back to Home</a></h3>
+            </div>
+
+            <div>
+                <h3 id="sub-header">Enter two numbers</h3>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-1">
+                    <label for="firstNumber">First Number</label>
+                </div>
+                <div class="col-2">
+                    <input type="number" name="firstNumber" id="firstNumber">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-1">
+                    <label for="operation">Operation</label>
+                </div>
+                <div class="col-2">
+                    <select name="operation" id="operation">
+                        <option value="">Choose an operation</option>
+                        <option value="add">Add (+)</option>
+                        <option value="subtract">Subtract (-)</option>
+                        <option value="multiply">Multiply (x)</option>
+                        <option value="divide">Divide (/)</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-1">
+                    <label for="secondNumber">Second Number</label>
+                </div>
+                <div class="col-2">
+                    <input type="number" name="secondNumber" id="secondNumber">
+                </div>
+            </div>
+            <br>
+            <button id="calculate-btn">Calculate</button>
+            
+        </div>
+        </form>
+    </section>
+
+</body>
+</html>
+
