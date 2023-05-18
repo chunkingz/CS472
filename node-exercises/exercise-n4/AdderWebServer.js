@@ -6,9 +6,7 @@ const PORT = 8080;
 
 http.createServer(function (req, res) {
     var q = url.parse(req.url, true);
-    console.log(q);
     var filename = "." + q.pathname;
-    console.log(filename);
     if (q.pathname=="/add.js") {
         addmod.add(req,res,q.query)
     } else {

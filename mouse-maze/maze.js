@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     function lose() { 
         if(userClickedStart && !userHasWon){
-            $(".boundary").addClass("youlose");
+            $("#maze .boundary").addClass("youlose");
             if(!userHitWall){
                 $("#status").text("You Lose! 😢 😞 😭 😩");
             }
@@ -24,7 +24,7 @@ $(document).ready(function () {
     function restart() { 
         userClickedStart = true;
         userHasWon = false;
-        $(".boundary").removeClass("youlose");
+        $("#maze .boundary").removeClass("youlose");
         userHitWall = false;
         $("#status").text(initText);
      }
@@ -35,12 +35,8 @@ $(document).ready(function () {
 
     $("#start").click(restart);
 
-    $(document).mousemove(function(event){
-        if(userClickedStart && !userHasWon){
-            if((event.pageX < 585 || event.pageX > 1092) || (event.pageY < 146 || event.pageY > 446)) {
-                lose();
-            }
-        }
+    $("#maze").mouseleave(function () { 
+        lose();
     });
 
 });

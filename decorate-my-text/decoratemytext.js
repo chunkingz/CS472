@@ -60,17 +60,7 @@ pigLatin.onclick = () => {
 
         if(startsWithVowel == false) {
             // the current word (inputArray[i]) starts with a consonant
-            
             let temp = inputArray[i].charAt(0);
-            // let counter = 0;
-            // for (let k = 0; k < vowels.length; k++) {
-            //     if(inputArray[i].charAt(k+1).startsWith(vowels[k])){
-            //         break;
-            //     } else {
-            //         temp += inputArray[i].charAt(k+1);
-            //         counter += k+1;
-            //     }
-            // }
             inputArray[i] = inputArray[i].substring(1) + temp + 'ay';
         }
     }
