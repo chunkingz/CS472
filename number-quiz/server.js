@@ -31,11 +31,10 @@ const questions = [
 const answers = [9, 8, 36, 13, 32];
 
 app.get("/", (req, res) => {
-  if (!req.session.usersScore) {
+  if (!req.session.usersScore && !req.session.currentQuestion) {
     req.session.usersScore = 0;
     req.session.currentQuestion = 0;
   }
-
   res.render("numberQuiz", {
     usersScore: req.session.usersScore,
     questionList: questions[req.session.currentQuestion],
@@ -44,18 +43,24 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
   const { answer } = req.body;
-  if (answer == answers[req.session.currentQuestion]) {
-    req.session.usersScore++;
-  }
-  req.session.currentQuestion++;
 
-  if (req.session.currentQuestion < questions.length) {
+  if(String(answer).trim() == "" || answer == null || answer == NaN) {
     res.redirect("/");
   } else {
-    res.render("result", {
-      usersScore: req.session.usersScore,
-      questionsLength: questions.length,
-    });
+
+    if (answer === answers[req.session.currentQuestion]) {
+      req.session.usersScore++;
+    }
+    req.session.currentQuestion++;
+
+    if (req.session.currentQuestion < questions.length) {
+      res.redirect("/");
+    } else {
+      res.render("result", {
+        usersScore: req.session.usersScore,
+        questionsLength: questions.length,
+      });
+    }
   }
 });
 
