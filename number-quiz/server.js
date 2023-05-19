@@ -31,7 +31,7 @@ const questions = [
 const answers = [9, 8, 36, 13, 32];
 
 app.get("/", (req, res) => {
-  if (!req.session.usersScore && !req.session.currentQuestion) {
+  if ((!req.session.usersScore) && (!req.session.currentQuestion)) {
     req.session.usersScore = 0;
     req.session.currentQuestion = 0;
   }
@@ -48,7 +48,7 @@ app.post("/", (req, res) => {
     res.redirect("/");
   } else {
 
-    if (answer === answers[req.session.currentQuestion]) {
+    if (answer == answers[req.session.currentQuestion]) {
       req.session.usersScore++;
     }
     req.session.currentQuestion++;
