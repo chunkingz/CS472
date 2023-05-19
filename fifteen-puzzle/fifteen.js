@@ -5,8 +5,7 @@ let timer;
 let whiteSpaceY;
 let whiteSpaceX;
 
-window.onload = function ()
-{
+window.onload = function(){
 	let puzzlearea = document.getElementById('puzzlearea');
 	
 	div = puzzlearea.getElementsByTagName('div');
@@ -18,8 +17,7 @@ window.onload = function ()
 		div[i].style.left = (i%4*100)+'px';
 		div[i].style.top = (parseInt(i/4)*100) + 'px';
 		div[i].style.backgroundPosition= '-' + div[i].style.left + ' ' + '-' + div[i].style.top;
-		div[i].onmouseover = function()
-		{
+		div[i].onmouseover = function(){
             this.style.backgroundImage="url('./background.jpg')"; 
 			if (checkCanMove(parseInt(this.innerHTML)))
 			{
@@ -27,14 +25,12 @@ window.onload = function ()
 				this.style.color = "#006600";
 			}
 		};
-		div[i].onmouseout = function()
-		{
+		div[i].onmouseout = function(){
 			this.style.border = "5px solid black";
 			this.style.color = "#000000";
 		};
 
-		div[i].onclick = function()
-		{
+		div[i].onclick = function(){
 			if (checkCanMove(parseInt(this.innerHTML)))
 			{
 				swap(this.innerHTML-1);
@@ -51,8 +47,7 @@ window.onload = function ()
 	whiteSpaceY = '300px';
 
 	var shufflebutton = document.getElementById('shufflebutton');
-	shufflebutton.onclick = function()
-	{
+	shufflebutton.onclick = function(){
 
 		for (var i=0; i<250; i++)
 		{
@@ -95,8 +90,7 @@ window.onload = function ()
 	};
 };
 
-function checkCanMove(pos)
-{
+function checkCanMove(pos){
 	if (calcLeft(whiteSpaceX, whiteSpaceY) == (pos-1))
 	{
 		return true;
@@ -117,8 +111,8 @@ function checkCanMove(pos)
 		return true;
 	}
 }
-function Blink()
-{
+
+function Blink(){
 	blink --;
 	if (blink == 0)
 	{
@@ -140,16 +134,14 @@ function Blink()
 	timer = setTimeout(Blink, 100);
 }
 
-function youWin()
-{
+function youWin(){
 	var body = document.getElementsByTagName('body');
 	body[0].style.backgroundColor = "#FF0000";
 	blink = 10;
 	timer = setTimeout(Blink, 100);
 }
 
-function checkFinish()
-{
+function checkFinish(){
 	var flag = true;
 	for (var i = 0; i < div.length; i++) {
 		var y = parseInt(div[i].style.top);
@@ -164,8 +156,7 @@ function checkFinish()
 	return flag;
 }
 
-function calcLeft(x, y)
-{
+function calcLeft(x, y){
 	var xx = parseInt(x);
 	var yy = parseInt(y);
 
@@ -222,8 +213,7 @@ function calcUp (x, y) {
 	}
 }
 
-function calcDown (x, y)
-{
+function calcDown (x, y){
 	var xx = parseInt(x);
 	var yy = parseInt(y);
 	if (yy < 300)

@@ -1,0 +1,21 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='./numberQuiz.css')
+  title Number Quiz
+section
+  div
+    h2 The Number Quiz
+  div
+    p Your current score is #{usersScore}
+    p Guess the next number in the sequence.
+    p #{questionList}
+    .form
+      form(action='', method='post')
+        label(for='answer') Your answer: 
+        input#answer(type='number' name='answer')
+        br
+        br
+        button(type='submit') Submit
