@@ -4,18 +4,17 @@ $(document).ready(function (){
     $("#view-button").click(getAPOD);
 });
 
-function getAPOD() { 
-    $.ajax({
-        url: "https://api.nasa.gov/planetary/apod",
-        type: "GET",
-        data: {
-            api_key: "TQSMNKnUqQRd5axRqadzrkoQiiFv16aFcBxJj7Kz",
-            date: $("#date").val()
-        },
-        dataType: "json",
-        success: showPicture,
-        error: noPicture
-    });
+
+function getAPOD() {
+    let api_key = "TQSMNKnUqQRd5axRqadzrkoQiiFv16aFcBxJj7Kz";
+    let date = $("#date").val();
+
+    fetch(`https://api.nasa.gov/planetary/apod?api_key=${api_key}&date=${date}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data.code == 400) noPicture(data);
+            else showPicture(data);
+        })
 }
 
 function showPicture(data) {
@@ -25,7 +24,7 @@ function showPicture(data) {
 }
 
 function noPicture(error) { 
-    $(".info").text(error.responseJSON.msg).css("color", "red");
+    $(".info").text(error.msg).css("color", "red");
     $("#pic").attr("src", "");
     $(".APOD-Title").text("")
 }
