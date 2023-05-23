@@ -1,14 +1,28 @@
 body{
+    margin: 0;
     font-family: 'Fira Mono', monospace;
 }
 
 section.header {
     text-align: center;
     font-size: 30px;
+    height: 250px;
+    text-shadow: 3px 3px #333;
+    width: 100%;
+    background-color: #1fc8db;
+    background-image: linear-gradient(140deg, #1ADEDB 0%, #BC70A4 50%, #BFD641 75%);
+    /* background-image: linear-gradient(140deg, #FF7D4D 0%, #AB6E93 50%, #5C99FF 75%); */
+    color: white;
+    opacity: 0.95;
+    margin: auto;
+    font-weight: 550;
+    padding-top: 105px;
 }
 
-hr {
-    width: 50%;
+section.search-result {
+    margin: 5% auto;
+    font-size: 22px;
+    width: 80%;
 }
 
 section.search-bar {
@@ -25,21 +39,19 @@ input[type="text"] {
 button[type="submit"] {
     font-size: 30px;
     padding: 10px;
-    background-color: black;
-    color: white;
+    background-color: #1ADEDB;
+    color: black;
     cursor: pointer;
+    transition-duration: 0.5s;
 }
 
 button[type="submit"]:hover {
-    background-color: yellow;
-    color: black;
-    text-shadow: 2px 2px #999;
-    box-shadow: 2px 2px red;
-}
-
-section.search-result {
-    width: 80%;
-    margin: 0 auto;
+    background-color: #AB6E93;
+    color: white;
+    /* text-shadow: 2px 2px #999; */
+    /* box-shadow: 2px 2px red; */
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 #footer{
@@ -53,3 +65,7 @@ section.search-result {
     opacity: 0.5;
 }
 
+#loader {
+    position: absolute;
+    left: 50%;
+}
